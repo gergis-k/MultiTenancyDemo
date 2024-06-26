@@ -1,0 +1,22 @@
+﻿@MultiTenancyDemo_HostAddress = https://localhost:7297
+
+GET {{MultiTenancyDemo_HostAddress}}/api/products
+tenantId: 2gsoftwaresservices-06-26-2024-09-16-pm
+###
+
+POST {{MultiTenancyDemo_HostAddress}}/api/products
+Content-Type: application/json
+tenantId: 2gsoftwaresservices-06-26-2024-09-16-pm
+
+{
+  "name": "Test",
+  "description": "This is a description for test product.",
+  "rate": 3
+}
+
+###
+
+GET {{MultiTenancyDemo_HostAddress}}/api/products/1
+tenantId: 2gsoftwaresservices-06-26-2024-09-16-pm
+
+###
